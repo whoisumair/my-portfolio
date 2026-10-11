@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Umair Portfolio — Selected video editing, reels, color grading, graphic design and UI/UX projects." />
+  <title>Portfolio | Umair — Video Editor & Designer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Background Orbs -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Umair<span>.</span></a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-cta">Let's Talk</a>
+      </nav>
+
+      <div class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Selected Work</span>
+      <h1>Portfolio</h1>
+      <p>A curated collection of video edits, short-form content, color grades, and design projects crafted to captivate audiences.</p>
+    </div>
+  </section>
+
+  <!-- ========== FILTER + GRID ========== -->
+  <section class="portfolio-section" style="padding-top: 0; padding-bottom: 6rem;">
+    <div class="container">
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" role="tablist" aria-label="Project categories">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Work</button>
+        <button class="filter-btn" data-filter="youtube-long" role="tab" aria-selected="false">YouTube Long Form</button>
+        <button class="filter-btn" data-filter="short-reels" role="tab" aria-selected="false">Short-Form Reels</button>
+        <button class="filter-btn" data-filter="color-sound" role="tab" aria-selected="false">Color Grading & Sound Design</button>
+        <button class="filter-btn" data-filter="graphic-uiux" role="tab" aria-selected="false">Graphic Design & UI/UX</button>
+      </div>
+
+      <!-- Project Grid -->
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <!-- ===== YouTube Long Form ===== -->
+        <article class="portfolio-card" data-category="youtube-long" data-category-label="YouTube Long Form">
+          <div class="card-thumb">
+            <img src="images/project1.jpg" alt="Documentary Style Brand Story" loading="lazy" />
+            <span class="card-category">YouTube Long Form</span>
+          </div>
+          <div class="card-body">
+            <h3>Documentary Style Brand Story</h3>
+            <p>Full narrative edit with cinematic pacing, interviews, and B-roll integration for a 12-minute brand film.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="youtube-long" data-category-label="YouTube Long Form">
+          <div class="card-thumb">
+            <img src="images/project2.jpg" alt="Tech Review Series Opener" loading="lazy" />
+            <span class="card-category">YouTube Long Form</span>
+          </div>
+          <div class="card-body">
+            <h3>Tech Review Series Opener</h3>
+            <p>High-energy intro sequence, product close-ups, and seamless transitions for a recurring tech channel.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="youtube-long" data-category-label="YouTube Long Form">
+          <div class="card-thumb">
+            <img src="images/project3.jpg" alt="Travel Vlog Episode" loading="lazy" />
+            <span class="card-category">YouTube Long Form</span>
+          </div>
+          <div class="card-body">
+            <h3>Travel Vlog Episode</h3>
+            <p>Story-driven travel edit with dynamic cuts, drone footage, and emotional music scoring.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="youtube-long" data-category-label="YouTube Long Form">
+          <div class="card-thumb">
+            <img src="images/project6.jpg" alt="Podcast Highlight Film" loading="lazy" />
+            <span class="card-category">YouTube Long Form</span>
+          </div>
+          <div class="card-body">
+            <h3>Podcast Highlight Film</h3>
+            <p>Multi-camera podcast edit turned into a polished long-form highlight with lower thirds and branding.</p>
+          </div>
+        </article>
+
+        <!-- ===== Short-Form Reels ===== -->
+        <article class="portfolio-card" data-category="short-reels" data-category-label="Short-Form Reels">
+          <div class="card-thumb">
+            <img src="images/project4.jpg" alt="Viral Product Hook Reel" loading="lazy" />
+            <span class="card-category">Short-Form Reels</span>
+          </div>
+          <div class="card-body">
+            <h3>Viral Product Hook Reel</h3>
+            <p>Fast-paced 15-second reel with pattern interrupts, text animations, and strong CTA for Instagram & TikTok.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="short-reels" data-category-label="Short-Form Reels">
+          <div class="card-thumb">
+            <img src="images/project5.jpg" alt="Behind-the-Scenes Series" loading="lazy" />
+            <span class="card-category">Short-Form Reels</span>
+          </div>
+          <div class="card-body">
+            <h3>Behind-the-Scenes Series</h3>
+            <p>Vertical short-form series capturing creative process with kinetic text and trending audio integration.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="short-reels" data-category-label="Short-Form Reels">
+          <div class="card-thumb">
+            <img src="images/project7.jpg" alt="App Feature Showcase Reel" loading="lazy" />
+            <span class="card-category">Short-Form Reels</span>
+          </div>
+          <div class="card-body">
+            <h3>App Feature Showcase Reel</h3>
+            <p>Clean UI screen recordings with motion graphics and captions optimized for mobile-first viewing.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="short-reels" data-category-label="Short-Form Reels">
+          <div class="card-thumb">
+            <img src="images/project8.jpg" alt="Fashion Drop Teaser" loading="lazy" />
+            <span class="card-category">Short-Form Reels</span>
+          </div>
+          <div class="card-body">
+            <h3>Fashion Drop Teaser</h3>
+            <p>High-fashion vertical edit with rhythmic cuts, color pops, and text overlays for product launch.</p>
+          </div>
+        </article>
+
+        <!-- ===== Color Grading & Sound Design ===== -->
+        <article class="portfolio-card" data-category="color-sound" data-category-label="Color Grading & Sound Design">
+          <div class="card-thumb">
+            <img src="images/project9.jpg" alt="Cinematic Teal & Orange Grade" loading="lazy" />
+            <span class="card-category">Color Grading & Sound</span>
+          </div>
+          <div class="card-body">
+            <h3>Cinematic Teal & Orange Grade</h3>
+            <p>Full color pipeline and custom sound design for a short film — mood-driven grade with immersive audio.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="color-sound" data-category-label="Color Grading & Sound Design">
+          <div class="card-thumb">
+            <img src="images/project10.jpg" alt="Music Video Color Pass" loading="lazy" />
+            <span class="card-category">Color Grading & Sound</span>
+          </div>
+          <div class="card-body">
+            <h3>Music Video Color Pass</h3>
+            <p>Stylized grade matching the track’s energy plus layered sound design and spatial audio effects.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="color-sound" data-category-label="Color Grading & Sound Design">
+          <div class="card-thumb">
+            <img src="images/project11.jpg" alt="Documentary Natural Grade" loading="lazy" />
+            <span class="card-category">Color Grading & Sound</span>
+          </div>
+          <div class="card-body">
+            <h3>Documentary Natural Grade</h3>
+            <p>Subtle, filmic color treatment and clean dialogue-focused sound mix for an interview-driven piece.</p>
+          </div>
+        </article>
+
+        <!-- ===== Graphic Design & UI/UX ===== -->
+        <article class="portfolio-card" data-category="graphic-uiux" data-category-label="Graphic Design & UI/UX">
+          <div class="card-thumb">
+            <img src="images/project12.jpg" alt="YouTube Thumbnail Pack" loading="lazy" />
+            <span class="card-category">Graphic Design & UI/UX</span>
+          </div>
+          <div class="card-body">
+            <h3>YouTube Thumbnail Pack</h3>
+            <p>High-CTR thumbnail designs with bold typography, face emphasis, and consistent brand treatment.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="graphic-uiux" data-category-label="Graphic Design & UI/UX">
+          <div class="card-thumb">
+            <img src="images/project13.jpg" alt="Social Media Campaign Creatives" loading="lazy" />
+            <span class="card-category">Graphic Design & UI/UX</span>
+          </div>
+          <div class="card-body">
+            <h3>Social Media Campaign Creatives</h3>
+            <p>Full set of Instagram carousels, story templates, and ad creatives for a product launch campaign.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="graphic-uiux" data-category-label="Graphic Design & UI/UX">
+          <div class="card-thumb">
+            <img src="images/project4.jpg" alt="SaaS Dashboard UI Design" loading="lazy" />
+            <span class="card-category">Graphic Design & UI/UX</span>
+          </div>
+          <div class="card-body">
+            <h3>SaaS Dashboard UI Design</h3>
+            <p>Clean, data-rich dashboard interface with dark mode, custom charts, and intuitive navigation flows.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="graphic-uiux" data-category-label="Graphic Design & UI/UX">
+          <div class="card-thumb">
+            <img src="images/project5.jpg" alt="Mobile App Interface Prototype" loading="lazy" />
+            <span class="card-category">Graphic Design & UI/UX</span>
+          </div>
+          <div class="card-body">
+            <h3>Mobile App Interface Prototype</h3>
+            <p>End-to-end mobile UI/UX prototype including onboarding, core flows, and micro-interactions.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="graphic-uiux" data-category-label="Graphic Design & UI/UX">
+          <div class="card-thumb">
+            <img src="images/project1.jpg" alt="Brand Identity & Website Design" loading="lazy" />
+            <span class="card-category">Graphic Design & UI/UX</span>
+          </div>
+          <div class="card-body">
+            <h3>Brand Identity & Website Design</h3>
+            <p>Complete visual identity system and responsive marketing website design for a creative studio.</p>
+          </div>
+        </article>
+
+        <!-- Empty state -->
+        <div class="portfolio-empty">
+          <p>No projects found in this category yet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+      <img class="lightbox-image" src="" alt="" />
+      <div class="lightbox-body">
+        <span class="lb-category"></span>
+        <h2></h2>
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Umair<span>.</span></a>
+          <p>Professional Video Editor, Graphic Designer & UI/UX Designer crafting stories that captivate.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Behance" title="Behance"><i class="fab fa-behance"></i></a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter / X" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">Video Editing</a>
+          <a href="services.html">Graphic Design</a>
+          <a href="services.html">UI/UX Design</a>
+          <a href="services.html">Motion Graphics</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <a href="mailto:umairsaeed1226@gmail.com">umairsaeed1226@gmail.com</a>
+          <a href="contact.html">Book a Call</a>
+          <a href="#">Download CV</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Umair. All rights reserved.</span>
+        <span>Designed & built with precision.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

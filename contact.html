@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Umair — Video Editor, Graphic Designer & UI/UX Designer. Let’s discuss your next project." />
+  <title>Contact | Umair — Video Editor & Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Background Orbs -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Umair<span>.</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="nav-cta">Let's Talk</a>
+      </nav>
+      <div class="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Get In Touch</span>
+      <h1>Let’s Create Something Great Together.</h1>
+      <p>Have a video editing, creative design, or YouTube channel management project in mind? Tell me about your goals, and let’s discuss how I can help.</p>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT CONTENT ========== -->
+  <section style="padding-top: 0; padding-bottom: 6rem;">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Left: Contact Details -->
+        <div class="contact-info-block">
+          <h2>Contact Details</h2>
+          <p>Prefer to reach out directly? Use any of the channels below — I typically respond within 24–48 hours.</p>
+
+          <div class="contact-cards">
+            <a href="mailto:umairsaeed1226@gmail.com" class="contact-card">
+              <div class="contact-card-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+              <div class="contact-card-text">
+                <span>Email</span>
+                <strong>umairsaeed1226@gmail.com</strong>
+              </div>
+            </a>
+
+            <a href="https://wa.me/923438733559" class="contact-card" target="_blank" rel="noopener noreferrer">
+              <div class="contact-card-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
+              <div class="contact-card-text">
+                <span>WhatsApp</span>
+                <strong>+92 343 8733559</strong>
+              </div>
+            </a>
+
+            <a href="https://www.instagram.com/who_isumair?vrfl=ZXUyZjU2NGhpdDg0" class="contact-card" target="_blank" rel="noopener noreferrer">
+              <div class="contact-card-icon"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+              <div class="contact-card-text">
+                <span>Instagram</span>
+                <strong>@who_isumair</strong>
+              </div>
+            </a>
+
+            <a href="https://www.youtube.com/" class="contact-card" target="_blank" rel="noopener noreferrer" title="Replace with your actual YouTube channel URL">
+              <div class="contact-card-icon"><i class="fab fa-youtube" aria-hidden="true"></i></div>
+              <div class="contact-card-text">
+                <span>YouTube</span>
+                <strong>My Channel</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrap">
+          <h3>Send a Project Inquiry</h3>
+          <p class="form-intro">Ready to bring your next idea to life? Send me a message about your project, and I’ll get back to you.</p>
+
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+              <div class="error-msg"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+              <div class="error-msg"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="projectType">Project Type</label>
+              <select id="projectType" name="projectType" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="YouTube Video Editing">YouTube Video Editing</option>
+                <option value="Short-Form Reels Editing">Short-Form Reels Editing</option>
+                <option value="Color Grading & Sound Design">Color Grading & Sound Design</option>
+                <option value="Full Channel Management">Full Channel Management</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="UI/UX Design">UI/UX Design</option>
+                <option value="Other">Other</option>
+              </select>
+              <div class="error-msg"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Budget <span class="optional">(optional)</span></label>
+              <select id="budget" name="budget">
+                <option value="" selected>Select a range</option>
+                <option value="Under $50">Under $50</option>
+                <option value="$50 – $150">$50 – $150</option>
+                <option value="$150 – $300">$150 – $300</option>
+                <option value="$300 – $500">$300 – $500</option>
+                <option value="$500+">$500+</option>
+                <option value="Custom / Not sure">Custom / Not sure</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project, timeline, and any specific goals…" required></textarea>
+              <div class="error-msg"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              Send Project Inquiry
+              <i class="fas fa-paper-plane"></i>
+            </button>
+
+            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Umair<span>.</span></a>
+          <p>Professional Video Editor, Graphic Designer & UI/UX Designer crafting stories that captivate.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/who_isumair?vrfl=ZXUyZjU2NGhpdDg0" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="Replace with your channel URL"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">YouTube Video Editing</a>
+          <a href="services.html">Short-Form Reels</a>
+          <a href="services.html">Color Grading & Sound</a>
+          <a href="services.html">Channel Management</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <a href="mailto:umairsaeed1226@gmail.com">umairsaeed1226@gmail.com</a>
+          <a href="https://wa.me/923438733559" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="contact.html">Send Inquiry</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Umair. All rights reserved.</span>
+        <span>Designed & built with precision.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

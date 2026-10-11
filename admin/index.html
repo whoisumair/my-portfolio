@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Umair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="/admin/css/admin.css" />
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="sidebar">
+      <a href="/admin/" class="logo">Umair<span>.</span> Admin</a>
+      <nav id="sideNav">
+        <a href="#" data-panel="dashboard" class="active"><i class="fas fa-th-large"></i> Dashboard</a>
+        <a href="#" data-panel="home"><i class="fas fa-home"></i> Home Editor</a>
+        <a href="#" data-panel="portfolio"><i class="fas fa-images"></i> Portfolio</a>
+        <a href="#" data-panel="about"><i class="fas fa-user"></i> About Editor</a>
+        <a href="#" data-panel="services"><i class="fas fa-briefcase"></i> Services</a>
+        <a href="#" data-panel="achievements"><i class="fas fa-trophy"></i> Awards</a>
+        <a href="#" data-panel="contact"><i class="fas fa-envelope"></i> Contact Info</a>
+        <a href="#" data-panel="media"><i class="fas fa-photo-video"></i> Media Library</a>
+        <a href="#" data-panel="themes"><i class="fas fa-palette"></i> Color Themes</a>
+        <a href="#" data-panel="account"><i class="fas fa-key"></i> Account / Password</a>
+      </nav>
+      <button class="btn btn-secondary logout-btn" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      <p style="margin-top:1rem;font-size:0.75rem;color:#707070;padding:0 0.5rem;">
+        <a href="/" target="_blank" style="color:#00c6ff;">View public site →</a>
+      </p>
+    </aside>
+
+    <main class="main">
+      <div class="alert-banner" id="mustChangeBanner">
+        <strong>Security:</strong> You are using the default password. Please change it now in the Account section before going public.
+      </div>
+      <div id="statusMsg" class="status-msg"></div>
+
+      <!-- DASHBOARD -->
+      <section class="panel active" id="panel-dashboard">
+        <div class="main-header">
+          <h1>Dashboard</h1>
+          <span class="user-badge" id="userBadge"></span>
+        </div>
+        <div class="stats-row" id="dashStats"></div>
+        <div class="card">
+          <h2>Quick actions</h2>
+          <p style="color:var(--text2);margin-bottom:1rem;">Manage your portfolio content from the sidebar. Changes are saved to the server and affect the public website.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+            <button class="btn btn-primary btn-sm" data-goto="services">Manage Services</button>
+            <button class="btn btn-secondary btn-sm" data-goto="portfolio">Manage Portfolio</button>
+            <button class="btn btn-secondary btn-sm" data-goto="contact">Update Contact</button>
+            <button class="btn btn-secondary btn-sm" data-goto="themes">Change Theme</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOME EDITOR -->
+      <section class="panel" id="panel-home">
+        <div class="main-header"><h1>Home Page Editor</h1></div>
+        <div class="card">
+          <form id="homeForm">
+            <div class="form-group"><label>Hero Badge</label><input name="heroBadge" id="home_heroBadge" /></div>
+            <div class="form-group"><label>Hero Title</label><input name="heroTitle" id="home_heroTitle" /></div>
+            <div class="form-group"><label>Hero Subtitle</label><input name="heroSubtitle" id="home_heroSubtitle" /></div>
+            <div class="form-group"><label>Tagline</label><input name="heroTagline" id="home_heroTagline" /></div>
+            <button type="submit" class="btn btn-primary">Save Home Content</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section class="panel" id="panel-portfolio">
+        <div class="main-header">
+          <h1>Portfolio Manager</h1>
+          <button class="btn btn-primary btn-sm" id="addProjectBtn"><i class="fas fa-plus"></i> Add Project</button>
+        </div>
+        <div class="card table-wrap">
+          <table>
+            <thead><tr><th>Title</th><th>Category</th><th>Featured</th><th>Published</th><th>Actions</th></tr></thead>
+            <tbody id="projectsTable"></tbody>
+          </table>
+        </div>
+        <div class="card" id="projectFormCard" style="display:none;">
+          <h2 id="projectFormTitle">Add / Edit Project</h2>
+          <form id="projectForm">
+            <input type="hidden" id="proj_id" />
+            <div class="form-group"><label>Title</label><input id="proj_title" required /></div>
+            <div class="form-group"><label>Description</label><textarea id="proj_description"></textarea></div>
+            <div class="form-group"><label>Category</label>
+              <select id="proj_category">
+                <option value="youtube-long">YouTube Long Form</option>
+                <option value="short-reels">Short-Form Reels</option>
+                <option value="color-sound">Color Grading & Sound Design</option>
+                <option value="graphic-uiux">Graphic Design & UI/UX</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Thumbnail URL</label><input id="proj_thumbnail" placeholder="/images/project1.jpg or /uploads/..." /></div>
+            <div class="form-group" style="display:flex;gap:1.5rem;">
+              <label><input type="checkbox" id="proj_featured" /> Featured on Home</label>
+              <label><input type="checkbox" id="proj_published" checked /> Published</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Project</button>
+            <button type="button" class="btn btn-secondary" id="cancelProjectBtn">Cancel</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="panel" id="panel-about">
+        <div class="main-header"><h1>About Page Editor</h1></div>
+        <div class="card">
+          <form id="aboutForm">
+            <div class="form-group"><label>Story Title</label><input id="about_storyTitle" /></div>
+            <div class="form-group"><label>Story Paragraphs (one per line)</label><textarea id="about_paragraphs" rows="6"></textarea></div>
+            <div class="form-group"><label>Mission Statement</label><textarea id="about_mission" rows="3"></textarea></div>
+            <button type="submit" class="btn btn-primary">Save About Content</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="panel" id="panel-services">
+        <div class="main-header">
+          <h1>Services Manager</h1>
+          <button class="btn btn-primary btn-sm" id="addServiceBtn"><i class="fas fa-plus"></i> Add Service</button>
+        </div>
+        <div class="card table-wrap">
+          <table>
+            <thead><tr><th>Title</th><th>Price</th><th>Unit</th><th>Published</th><th>Actions</th></tr></thead>
+            <tbody id="servicesTable"></tbody>
+          </table>
+        </div>
+        <div class="card" id="serviceFormCard" style="display:none;">
+          <h2 id="serviceFormTitle">Add / Edit Service</h2>
+          <form id="serviceForm">
+            <input type="hidden" id="svc_id" />
+            <div class="form-group"><label>Title</label><input id="svc_title" required /></div>
+            <div class="form-group"><label>Description</label><textarea id="svc_description"></textarea></div>
+            <div class="form-group"><label>Price</label><input type="number" id="svc_price" min="0" step="1" /></div>
+            <div class="form-group"><label>Price Unit</label>
+              <select id="svc_priceUnit">
+                <option value="per video">per video</option>
+                <option value="per reel">per reel</option>
+                <option value="per month">per month</option>
+                <option value="per project">per project</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Icon (Font Awesome class)</label><input id="svc_icon" placeholder="fa-film" /></div>
+            <div class="form-group"><label><input type="checkbox" id="svc_published" checked /> Published</label></div>
+            <button type="submit" class="btn btn-primary">Save Service</button>
+            <button type="button" class="btn btn-secondary" id="cancelServiceBtn">Cancel</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ACHIEVEMENTS -->
+      <section class="panel" id="panel-achievements">
+        <div class="main-header">
+          <h1>Awards & Achievements</h1>
+          <button class="btn btn-primary btn-sm" id="addAchBtn"><i class="fas fa-plus"></i> Add</button>
+        </div>
+        <div class="card table-wrap">
+          <table>
+            <thead><tr><th>Name</th><th>Year</th><th>Organization</th><th>Actions</th></tr></thead>
+            <tbody id="achTable"></tbody>
+          </table>
+        </div>
+        <div class="card" id="achFormCard" style="display:none;">
+          <form id="achForm">
+            <input type="hidden" id="ach_id" />
+            <div class="form-group"><label>Name</label><input id="ach_name" required /></div>
+            <div class="form-group"><label>Year</label><input id="ach_year" /></div>
+            <div class="form-group"><label>Organization / Event</label><input id="ach_organization" /></div>
+            <div class="form-group"><label>Description</label><textarea id="ach_description"></textarea></div>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-secondary" id="cancelAchBtn">Cancel</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="panel" id="panel-contact">
+        <div class="main-header"><h1>Contact Information</h1></div>
+        <div class="card">
+          <form id="contactFormAdmin">
+            <div class="form-group"><label>Display Name</label><input id="c_name" /></div>
+            <div class="form-group"><label>Email</label><input type="email" id="c_email" /></div>
+            <div class="form-group"><label>WhatsApp</label><input id="c_whatsapp" placeholder="+92343..." /></div>
+            <div class="form-group"><label>Instagram URL</label><input id="c_instagram" /></div>
+            <div class="form-group"><label>YouTube URL</label><input id="c_youtube" /></div>
+            <div class="form-group"><label>Behance URL</label><input id="c_behance" /></div>
+            <div class="form-group"><label>LinkedIn URL</label><input id="c_linkedin" /></div>
+            <button type="submit" class="btn btn-primary">Save Contact Info</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- MEDIA -->
+      <section class="panel" id="panel-media">
+        <div class="main-header"><h1>Image & Media Library</h1></div>
+        <div class="card">
+          <p style="color:var(--text2);margin-bottom:1rem;">Upload JPG, PNG or WebP (max 5 MB). Use the returned URL in project thumbnails or other fields.</p>
+          <form id="uploadForm">
+            <div class="form-group"><input type="file" id="uploadFile" accept=".jpg,.jpeg,.png,.webp" /></div>
+            <button type="submit" class="btn btn-primary">Upload Image</button>
+          </form>
+          <div id="uploadResult" style="margin-top:1rem;"></div>
+        </div>
+      </section>
+
+      <!-- THEMES -->
+      <section class="panel" id="panel-themes">
+        <div class="main-header"><h1>Website Color Themes</h1></div>
+        <div class="card">
+          <p style="color:var(--text2);margin-bottom:1.25rem;">Select a theme. It is saved and applied across the public website.</p>
+          <div class="theme-grid" id="themeGrid">
+            <div class="theme-option" data-theme="charcoal-orange">
+              <div class="theme-swatch" style="background:linear-gradient(135deg,#0a0a0a,#ff5c00 60%,#00c6ff);"></div>
+              <span>Charcoal Orange</span>
+            </div>
+            <div class="theme-option" data-theme="midnight-blue">
+              <div class="theme-swatch" style="background:linear-gradient(135deg,#0a1628,#1e3a5f 50%,#3b82f6);"></div>
+              <span>Midnight Blue</span>
+            </div>
+            <div class="theme-option" data-theme="slate-purple">
+              <div class="theme-swatch" style="background:linear-gradient(135deg,#0f0a14,#4c1d95 50%,#a78bfa);"></div>
+              <span>Slate Purple</span>
+            </div>
+            <div class="theme-option" data-theme="emerald-dark">
+              <div class="theme-swatch" style="background:linear-gradient(135deg,#0a1410,#065f46 50%,#34d399);"></div>
+              <span>Emerald Dark</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACCOUNT -->
+      <section class="panel" id="panel-account">
+        <div class="main-header"><h1>Admin Account & Password</h1></div>
+        <div class="card">
+          <h3>Change Password</h3>
+          <form id="passwordForm">
+            <div class="form-group"><label>Current Password</label><input type="password" id="curPass" required /></div>
+            <div class="form-group"><label>New Password (min 8 characters)</label><input type="password" id="newPass" required minlength="8" /></div>
+            <div class="form-group"><label>Confirm New Password</label><input type="password" id="confirmPass" required /></div>
+            <button type="submit" class="btn btn-primary">Update Password</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/admin/js/admin.js"></script>
+</body>
+</html>

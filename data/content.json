@@ -1,0 +1,138 @@
+{
+  "site": {
+    "name": "Umair",
+    "tagline": "Turning raw footage into stories that hook.",
+    "roles": "Video Editor · Graphic Designer · UI/UX Designer"
+  },
+  "contact": {
+    "email": "umairsaeed1226@gmail.com",
+    "whatsapp": "+923438733559",
+    "instagram": "https://www.instagram.com/who_isumair?vrfl=ZXUyZjU2NGhpdDg0",
+    "youtube": "https://www.youtube.com/",
+    "behance": "",
+    "linkedin": ""
+  },
+  "theme": "slate-purple",
+  "home": {
+    "heroBadge": "Available for new projects",
+    "heroTitle": "Umair",
+    "heroSubtitle": "Video Editor · Graphic Designer · UI/UX Designer",
+    "heroTagline": "Turning raw footage into stories that hook.",
+    "stats": {
+      "videos": "50+",
+      "clients": "50+",
+      "years": "3+",
+      "rating": "4.5"
+    }
+  },
+  "about": {
+    "storyTitle": "Turning passion into polished stories",
+    "storyParagraphs": [
+      "I started my creative journey three years ago as a hobby — helping a friend edit his YouTube uploads on weekends. What began as simple cuts quickly grew into a deep love for storytelling through editing, sound design, and color grading.",
+      "Over time I expanded into graphic design and UI/UX design, realizing that the same principles that keep a viewer watching a video also make interfaces feel effortless and brands memorable. Eventually I turned it into a full-time career.",
+      "What makes me different is that I do not just cut clips together. I build a narrative that keeps the viewer watching until the very end — every transition, grade, and sound choice serves the story."
+    ],
+    "mission": "My mission is to help creators and brands turn raw, unorganized footage into polished stories that grow their audience."
+  },
+  "services": [
+    {
+      "id": "svc-1",
+      "title": "YouTube Video Editing",
+      "description": "Full editing of long-form YouTube videos, including clean cuts, smooth transitions, engaging pacing, and polished storytelling.",
+      "price": 30,
+      "priceUnit": "per video",
+      "icon": "fa-film",
+      "order": 1,
+      "published": true
+    },
+    {
+      "id": "svc-2",
+      "title": "Short-Form Reels Editing",
+      "description": "Fast-paced vertical videos designed to capture attention on Instagram Reels, YouTube Shorts, and TikTok.",
+      "price": 20,
+      "priceUnit": "per reel",
+      "icon": "fa-mobile-alt",
+      "order": 2,
+      "published": true
+    },
+    {
+      "id": "svc-3",
+      "title": "Color Grading & Sound Design",
+      "description": "Professional color correction, cinematic color grading, audio cleanup, and sound mixing for a polished final result.",
+      "price": 50,
+      "priceUnit": "per video",
+      "icon": "fa-sliders-h",
+      "order": 3,
+      "published": true
+    },
+    {
+      "id": "svc-4",
+      "title": "Full Channel Management",
+      "description": "Monthly YouTube channel support, including video editing and upload management to help creators maintain a consistent publishing schedule.",
+      "price": 100,
+      "priceUnit": "per month",
+      "icon": "fa-desktop",
+      "order": 4,
+      "published": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "Documentary Style Brand Story",
+      "description": "Full narrative edit with cinematic pacing, interviews, and B-roll integration for a 12-minute brand film.",
+      "category": "youtube-long",
+      "categoryLabel": "YouTube Long Form",
+      "thumbnail": "/images/project1.jpg",
+      "order": 1,
+      "published": true,
+      "featured": true
+    },
+    {
+      "id": "proj-2",
+      "title": "Tech Review Series Opener",
+      "description": "High-energy intro sequence, product close-ups, and seamless transitions for a recurring tech channel.",
+      "category": "youtube-long",
+      "categoryLabel": "YouTube Long Form",
+      "thumbnail": "/images/project2.jpg",
+      "order": 2,
+      "published": true,
+      "featured": true
+    },
+    {
+      "id": "proj-3",
+      "title": "Viral Product Hook Reel",
+      "description": "Fast-paced 15-second reel with pattern interrupts, text animations, and strong CTA for Instagram & TikTok.",
+      "category": "short-reels",
+      "categoryLabel": "Short-Form Reels",
+      "thumbnail": "/images/project4.jpg",
+      "order": 3,
+      "published": true,
+      "featured": true
+    },
+    {
+      "id": "proj-4",
+      "title": "Cinematic Teal & Orange Grade",
+      "description": "Full color pipeline and custom sound design for a short film — mood-driven grade with immersive audio.",
+      "category": "color-sound",
+      "categoryLabel": "Color Grading & Sound Design",
+      "thumbnail": "/images/project9.jpg",
+      "order": 4,
+      "published": true,
+      "featured": false
+    },
+    {
+      "id": "proj-5",
+      "title": "YouTube Thumbnail Pack",
+      "description": "High-CTR thumbnail designs with bold typography, face emphasis, and consistent brand treatment.",
+      "category": "graphic-uiux",
+      "categoryLabel": "Graphic Design & UI/UX",
+      "thumbnail": "/images/project12.jpg",
+      "order": 5,
+      "published": true,
+      "featured": true
+    }
+  ],
+  "achievements": [],
+  "updatedAt": "2026-10-11T04:22:39.436Z"
+}

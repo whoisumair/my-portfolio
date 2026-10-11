@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.vercel/
+coverage/
+*.log
+data/users.json
+public/uploads/*
+!public/uploads/.gitkeep
+.vs/
+.DS_Store
+Thumbs.db
