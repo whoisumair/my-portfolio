@@ -78,6 +78,10 @@ On deploy:
 
 For pure static hosting (Netlify/Vercel static) the Admin CMS will not work — you need a Node host.
 
+### Vercel deployment
+
+`vercel.json` routes requests to the Express API function, so the public site can be deployed on Vercel. The CMS is not production-persistent on Vercel as currently implemented: JSON data, uploaded files, and the default in-memory session store are local to function instances and may not persist or be shared between requests. Use durable external storage and a shared session store for the admin CMS, or deploy to a host with persistent storage.
+
 ## Security Checklist Before Going Public
 
 - [ ] Change the default admin password
