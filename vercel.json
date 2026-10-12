@@ -2,15 +2,7 @@
   "version": 2,
   "functions": {
     "api/index.js": {
-      "includeFiles": [
-        "admin/**",
-        "css/**",
-        "data/**",
-        "images/**",
-        "js/**",
-        "public/**",
-        "*.html"
-      ]
+      "includeFiles": "{admin/**,css/**,data/**,images/**,js/**,public/**,*.html}"
     }
   },
   "rewrites": [
